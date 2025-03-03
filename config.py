@@ -13,3 +13,7 @@ PORT = int(os.getenv("PORT", "8050"))
 
 # Database url for creating SQLalchemy engine
 DATABASE_URL = os.getenv("DATABASE_URL")
+
+EXTERNAL_SCRIPTS = [
+    {'src': 'https://cdn.tailwindcss.com'}
+]

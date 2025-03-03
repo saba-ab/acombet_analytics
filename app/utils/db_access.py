@@ -1,8 +1,9 @@
 import os
 
-from sqlalchemy import create_engine
-from dotenv import load_dotenv
 import pandas as pd
+from dotenv import load_dotenv
+from sqlalchemy import create_engine
+
 load_dotenv()
 
 
@@ -15,7 +16,8 @@ class Database:
         if db_url is None:
             db_url = os.getenv("DATABASE_URL")
         if not db_url:
-            raise ValueError("Database URL is not set in environment variables")
+            raise ValueError(
+                "Database URL is not set in environment variables")
 
         self.db_url = db_url
         self.engine = create_engine(self.db_url)

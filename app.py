@@ -4,7 +4,7 @@ from dash import Dash
 import config
 from app.layout import get_layout
 
-app = Dash(__name__)
+app = Dash(__name__, external_scripts=config.EXTERNAL_SCRIPTS)
 
 server = app.server
 
