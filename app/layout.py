@@ -1,6 +1,6 @@
 """Main layout for acombet analytics"""
 
-from dash import html
+from dash import html, dcc
 
 from app.components import footer, header, sidebar
 
@@ -17,6 +17,7 @@ def get_layout():
 
     return html.Div(
         children=[
+            dcc.Location(id="url", refresh=False),
             header.get_header(),
             html.Div(
                 children=[
@@ -28,7 +29,7 @@ def get_layout():
                             html.P(
                                 "Select an option from sidebar to view detailed insights.")
                         ],
-                        className="flex flex-col gap-4"
+                        className="flex flex-col gap-4 w-full h-full"
                     )
                 ],
                 className="flex min-h-[80vh]"
