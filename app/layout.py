@@ -1,7 +1,8 @@
 """Main layout for acombet analytics"""
 
 from dash import html
-from app.components import header, sidebar, footer
+
+from app.components import footer, header, sidebar
 
 
 def get_layout():
@@ -27,22 +28,12 @@ def get_layout():
                             html.P(
                                 "Select an option from sidebar to view detailed insights.")
                         ],
-                        style={
-                            "flex": 1,
-                            "padding": "20px"
-                        }
+                        className="flex flex-col gap-4"
                     )
                 ],
-                style={
-                    "display": "flex",
-                    "minHeight": "80vh"
-                }
+                className="flex min-h-[80vh]"
             ),
             footer.get_footer()
         ],
-        style={
-            "display": "flex",
-            "flexDirection": "column",
-            "minHeight": "100vh"
-        }
+        className="flex flex-col min-h-[100vh]"
     )

@@ -1,5 +1,5 @@
 """Sidebar component for layout"""
-from dash import html, dcc
+from dash import dcc, html
 
 
 def get_sidebar():
@@ -8,20 +8,13 @@ def get_sidebar():
     """
     return html.Div(
         children=[
-            html.H2("Navigation", style={
-                    "padding": "10px", "marginBottom": "0px"}),
+            html.H2("Navigation", className="""mb-[20px]"""),
             html.Hr(),
-            dcc.Link("Overview", href="/overview",
-                     style={"display": "block", "padding": "10px 0"}),
+            dcc.Link("Overview", href="/overview", className="""pt-[20px]"""),
             dcc.Link("User Analytics", href="/user-analytics",
-                     style={"display": "block", "padding": "10px 0"}),
-            dcc.Link("Revenue", href="/revenue",
-                     style={"display": "block", "padding": "10px 0"}),
+                     className="""pt-[10px]"""),
+            dcc.Link("Revenue", href="/revenue", className="""pt-[10px]"""),
         ],
-        style={
-            "width": "250px",
-            "backgroundColor": "#f0f0f0",
-            "padding": "20px",
-            "boxShadow": "2px 0px 5px rgba(0,0,0,0.1)"
-        }
+        className="""w-[250px] bg-[#f0f0f0] p-5 shadow-sm flex flex-col gap-5"""
+
     )
