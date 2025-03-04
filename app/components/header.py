@@ -10,8 +10,8 @@ def get_header():
         children=[
             html.H1(
                 "Acombet Analytics Dashboard",
-                className="text-center p-4 m-0"
+                className="text-center p-4 m-0 text-white"
             )
         ],
-        className="bg-[#f8f9fa] border border-b-[#eaeaea]"
+        className="transparent border border-[#0b9799] shadow-xl p-4 min-h-[10vh]"
     )
