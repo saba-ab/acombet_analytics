@@ -15,6 +15,5 @@ def get_sidebar():
                      className="""pt-[10px]"""),
             dcc.Link("Revenue", href="/revenue", className="""pt-[10px]"""),
         ],
-        className="""w-[250px] bg-[#f0f0f0] p-5 shadow-sm flex flex-col gap-5"""
-
+        className="w-[250px] bg-[#f0f0f0]/10 p-5 shadow-sm flex flex-col gap-5 text-white border-[#0b9799]"
     )

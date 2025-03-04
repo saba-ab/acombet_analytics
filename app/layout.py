@@ -1,6 +1,6 @@
 """Main layout for acombet analytics"""
 
-from dash import html, dcc
+from dash import dcc, html
 
 from app.components import footer, header, sidebar
 
@@ -25,11 +25,15 @@ def get_layout():
                     html.Div(
                         id="page-content",
                         children=[
-                            html.H2("Welcome to Acombet Analytics Dashboard"),
+                            html.H2("Welcome to Acombet Analytics Dashboard",
+                                    className="text-white"
+                                    ),
                             html.P(
-                                "Select an option from sidebar to view detailed insights.")
+                                "Select an option from sidebar to view detailed insights.",
+                                className="text-white"
+                            )
                         ],
-                        className="flex flex-col gap-4 w-full h-full"
+                        className="flex flex-col gap-4 w-full h-full min-h-[80vh]"
                     )
                 ],
                 className="flex min-h-[80vh]"

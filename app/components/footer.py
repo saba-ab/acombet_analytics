@@ -10,8 +10,8 @@ def get_footer():
         children=[
             html.P(
                 "© 2025 Acombet Analytics. All rights reserved.",
-                className="""text-center p-[10px] m-0"""
+                className="""text-center text-white p-[10px] m-0"""
             )
         ],
-        className=""" bg-[#f8f9fa] bt-[1px] bt-[#eaeaea] mt-auto"""
+        className=""" bg-black bt-[1px] bt-[#eaeaea] mt-auto min-h-[5vh]"""
     )
